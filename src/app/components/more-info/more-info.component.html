@@ -1,0 +1,9 @@
+<div *ngIf='loading' class="spinner-border text-info" role="status">
+    <span class="sr-only">Loading...</span>
+  </div>
+<ng-container *ngIf='!loading'>
+    <img [src]="moreInfo.image.large" alt="coin img" >
+    <h4>{{moreInfo.market_data.current_price.usd |currency}}</h4>
+    <h4>&euro;{{moreInfo.market_data.current_price.eur |currency:" "}}</h4>
+    <h4>&#8362;{{moreInfo.market_data.current_price.ils |currency:" " }}</h4>
+</ng-container>

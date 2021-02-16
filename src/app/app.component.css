@@ -1,0 +1,13 @@
+.parallax{
+    /* The image used */
+    background-image: url("https://www.trvl.co.il/wp-content/uploads/2017/02/eb3cb30620f31c3e81584d04ee44408be273ead31db1104795f0_640_background.jpg");
+  
+    /* Set a specific height */
+    min-height: 150px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }

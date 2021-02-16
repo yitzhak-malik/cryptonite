@@ -1,0 +1,16 @@
+
+  <div class="card">
+    <div class="card-body">
+      <label class="switch">
+        <input class="switch-input" type="checkbox" name="box" [checked]='__liveReportsToggle[0]' 
+        (click)="toListliveReports()">
+        <span class="switch-button"></span>
+      </label>
+      <h5 class="card-title">{{coins.symbol}}</h5>
+      <p class="card-text">{{coins.name}}</p>
+      <a *ngIf='noneModal' (click)="moreInfo=!moreInfo" class="btn btn-primary">more info</a>
+      <app-more-info [idMoreInfo]="coins.id" *ngIf="moreInfo"></app-more-info>
+    </div>
+   
+  </div>
+ 
