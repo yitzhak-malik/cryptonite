@@ -2,9 +2,8 @@
    ========================================================================== */
 
    .switch {
-    display: inline-block;
     margin-bottom: .5rem;
-    float: right;
+    float:right;
 }
 
 .switch-button {

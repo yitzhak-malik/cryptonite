@@ -16,6 +16,7 @@ export class ApiCoinsesService   {
   private timer: any;
   private listCoins:coinsModel[];
   private rootApi='https://api.coingecko.com/api/v3/coins/';
+
   constructor(private httpClient:HttpClient) {
     this.MORE_INFO={}; 
     this.timer={};
@@ -24,7 +25,6 @@ export class ApiCoinsesService   {
       symbol:"", 
       name:""
     }];
-   // this.listCoins=[{}];
    }
 
  get(): Observable<coinsModel[]> {
@@ -35,10 +35,7 @@ export class ApiCoinsesService   {
       .pipe(map(list=>list= list as coinsModel[]),map(list=>list=list.filter(list=>list.id!=="")),tap(list=>this.listCoins=list as coinsModel[]));
     }
 
-  // .subscribe(list => this.listCoins= list ); 
-  //  this.listCoins=this.listCoins.splice(1000,100);
-  // return of(this.listCoins);
-  // return of (this.listCoins);
+  
  }
  getMoreInfo(id:string):Observable<any>{
        if( this.MORE_INFO[id]) {

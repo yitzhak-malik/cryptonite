@@ -22,7 +22,8 @@ noneModal=false;
  
 
   ngOnInit(): void {
-        this.listLiveReportsService.get().subscribe(list=>{
+    
+     this.listLiveReportsService.get().subscribe(list=>{
       if(list.length<environment.listLivereport){
         this.activeModal.close("delete");
       }});

@@ -27,7 +27,8 @@ export class MoreInfoComponent implements OnInit, OnDestroy{
   }
 
   ngOnInit(): void {
-    setTimeout(()=>{this.loading=!this.loading},1500)
+    setTimeout(()=>{this.loading=!this.loading},1500);
+
     this.apiCoinsesService.offDeleteMoreInfo(this.idMoreInfo);
     this.apiCoinsesService.getMoreInfo(this.idMoreInfo).subscribe(more=>{this.moreInfo=more
       ; console.log(this.moreInfo)});
